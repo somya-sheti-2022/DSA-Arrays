@@ -86,3 +86,36 @@ void pushZerosToEnd(int arr[], int n) {
 ![App Screenshot](https://github.com/somya-sheti-2022/DSA-Arrays/blob/main/move%20all%20zeros.png)
 
 **Question link:** https://www.geeksforgeeks.org/move-zeroes-end-array/
+
+### Question 3 : Maximum Difference (find the maximum of arr[j] - arr[i] where j>i)
+
+**Input**\
+arr[] = {2,3,10,6,4,8,1}, n=7;\
+**Output**\
+res = 8 (10-2)
+
+**Logic**\
+1- We intialize answer as arr[1]-arr[0] and min value as arr[0]\
+2- Now we keep on traversing the array and keep calculating maximimum diffrence and update min value. 
+
+**Logic Code Snippet**
+
+```cpp
+int maxDiff(int arr[], int n)
+{
+	int res = arr[1] - arr[0], minVal = arr[0];
+	for(int i = 1; i < n; i++){
+	    res = max(res, arr[i] - minVal);	
+		minVal = min(minVal, arr[i]);
+	}
+	return res;
+}
+```
+
+[Click here for complete code](https://github.com/somya-sheti-2022/DSA-Arrays/blob/main/max%20diff.cpp)
+
+### Output of above code
+
+![App Screenshot](https://github.com/somya-sheti-2022/DSA-Arrays/blob/main/max%20diff.png)
+
+**Question Link**: Not available
