@@ -48,3 +48,41 @@ void leftRotate(int arr[], int n, int d) {
 
 
 **link:** https://www.geeksforgeeks.org/array-rotation/
+
+### Question 2 : Move all zeros to end and maitain the order of remaining array
+
+**Input**\
+arr[] = {1, 2, 0, 4, 3, 0, 5, 0}, n=8;\
+**Output**\
+arr[] = {1, 2, 4, 3, 5, 0, 0, 0};
+
+**Logic**\
+1- We have a **count** variable to count number of non zeros element.\
+2- if **count** is not equal to index at any point of time we swap arr[i],arr[count] as there will be zeros.\
+3- Finally we get the desired output
+
+
+**Logic Code Snippet**
+
+```cpp
+void pushZerosToEnd(int arr[], int n) {
+	int count=0;
+    for(int i=0;i<n;i++){
+	    if(arr[i]!=0){
+	        if(i!=count){
+                arr[count]=arr[i];
+	            arr[i]=0;
+	        }
+	        count++;
+	    }
+	}return;
+}
+```
+
+[Click here for complete code](https://github.com/somya-sheti-2022/DSA-Arrays/blob/main/move%20all%20zeros.cpp)
+
+### Output of above code
+
+![App Screenshot](https://github.com/somya-sheti-2022/DSA-Arrays/blob/main/move%20all%20zeros.png)
+
+**Question link:** https://www.geeksforgeeks.org/move-zeroes-end-array/
